@@ -6,12 +6,12 @@ import os
 st.title("❤ Personal Health Recommendation System")
 st.write("This is a demo project. Not medical advice.")
 
-# Path to model
-model_path = r"c:\Users\jayasurya\Downloads\heart_model.joblib"
+# Path to model (relative path for GitHub/Streamlit Cloud)
+model_path = "heart_model.joblib"
 
 # Check if file exists
 if not os.path.exists(model_path):
-    st.error(f"❌ Model file not found at: {model_path}")
+    st.error(f"❌ Model file not found: {model_path}")
     st.stop()
 
 # Load model
